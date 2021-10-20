@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BornApp.Views.ItemDetailPage"
+             xmlns:local="clr-namespace:BornApp.ViewModels"  
+             xmlns:model="clr-namespace:BornApp.Models"
+             Title="{Binding Title}"
+             x:Name="ViewItemDetails"
+             BackgroundImageSource="https://gcdn.pbrd.co/images/abmoNG3WGna6.png?o=1">
+
+
+
+
+    <!--<CollectionView x:DataType="local:ItemDetailViewModel" ItemsSource="{Binding Urls}">
+
+            <CollectionView.Header>
+                <Frame HasShadow="True">
+                    --><!--<Label Text="Is this working=?"/>--><!--
+                    <Label Text="{Binding Description}" FontSize="18" TextColor="#a3927a"/>
+                </Frame>
+            </CollectionView.Header>
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="1"/>
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout>
+
+                        <Grid>
+                            <Image Source="{Binding }"/>
+                        </Grid>
+                        
+                    </StackLayout>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>-->
+
+    <ScrollView>
+
+
+        <StackLayout x:DataType="local:ItemDetailViewModel">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="170"/>
+                </Grid.RowDefinitions>
+
+                
+                    <Frame HasShadow="True" BorderColor="WhiteSmoke" Grid.Row="0">
+                        <Label  Text="{Binding Description}" FontSize="18" TextColor="#a3927a"/>
+                    </Frame>
+
+                    <Grid Grid.Row="1" RowSpacing="40">
+
+                    <StackLayout Grid.Row="0">
+                        <Frame Padding="5,5,5,30" Margin="5,5,5,-10" HasShadow="True">
+                            <Image Source="https://gcdn.pbrd.co/images/f8pV30bIFlu4.jpg?o=1" Margin="0,0,0,0" />
+                        </Frame>
+                        <Label Text="Lækker Ferrari" FontSize="18" TextColor="#a3927a" Margin="0,-21,0,0" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+                        
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="1">
+                        <Frame Padding="5,5,5,30" Margin="5,5,5,-10" HasShadow="True">
+                            <Image Source="{Binding ImageUrl2}" Aspect="AspectFill" />
+                        </Frame>
+                        <Label Text="Lækker rød bil" FontSize="18" TextColor="#a3927a" Margin="0,-21,0,0" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+                   
+                       
+                  
+                    <StackLayout Grid.Row="2" Margin="0,0,0,0" Padding="0,0,0,0">
+                        <Frame Padding="5,5,5,30" Margin="5,5,5,-10" HasShadow="True">
+                            <Image Source="{Binding ImageUrl3}" Aspect="AspectFill" />
+                    </Frame>
+                        <Label Text="Lækker grøn bil"  FontSize="18" TextColor="#a3927a" Margin="0,-21,0,0" Padding="0,0,0,0" HorizontalTextAlignment="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3">
+                        <Image Source="https://gcdn.pbrd.co/images/baKzbliQVtJ5.jpg?o=1"/>
+                        <Label Text="børnenesbornholm.dk" TextColor="#a3927a" HorizontalOptions="Center" Opacity="0.4"/>
+                    </StackLayout>
+
+                </Grid>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

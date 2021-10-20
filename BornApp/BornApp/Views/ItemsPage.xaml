@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BornApp.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:BornApp.ViewModels"  
+             xmlns:model="clr-namespace:BornApp.Models"  
+             x:Name="BrowseItemsPage"
+             BackgroundImageSource="https://gcdn.pbrd.co/images/abmoNG3WGna6.png?o=1"           
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+
+
+
+    <RefreshView x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}" BackgroundColor="Transparent">
+
+
+        <CollectionView x:Name="ItemsCollectionView"
+                ItemsSource="{Binding Items}"
+                SelectionMode="None" >
+
+            <CollectionView.Header>
+
+                <StackLayout HeightRequest="270">
+                    <Frame HasShadow="True" BorderColor="WhiteSmoke" Padding="10,10,10,40" Margin="-10,-10,-10,-50">
+                        <!---->
+                        <Image Source="https://gcdn.pbrd.co/images/ERusVj6XmJgY.jpg?o=1" Aspect="AspectFill" HeightRequest="170"/>
+                    </Frame>
+                    <Frame Padding="0,0,0,0" Margin="0,4,0,0">
+                        <Label Text="Events" TextColor="#a3927a" BackgroundColor="WhiteSmoke" HorizontalTextAlignment="Center" FontSize="28"/>
+                    </Frame>
+                    <!--<Image Source="https://gcdn.pbrd.co/images/ERusVj6XmJgY.jpg?o=1" Aspect="AspectFill" HeightRequest="170"/>-->
+
+                </StackLayout>
+            </CollectionView.Header>
+
+            <CollectionView.ItemsLayout>
+                <GridItemsLayout Orientation="Vertical" Span="2" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <StackLayout x:DataType="model:Item" Padding="20">
+                        <Frame HasShadow="True" BorderColor="WhiteSmoke" Padding="10,10,10,40" Margin="-10,-10,-10,-35">
+                            <Image Scale="1.08" Source="{Binding ImageUrl}" HeightRequest="140"/>
+                        </Frame>
+                        <Grid >
+                            <Label  Text="{Binding Text}" BackgroundColor="White" TextColor="#a3927a" FontSize="16" HorizontalTextAlignment="Center"/>
+                        </Grid>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+
+                    </StackLayout>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+
+
+
+    </RefreshView>
+</ContentPage>
