@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r7Vzy9JlmXFDsWcZBKqLWlgPtTF7LYIsW6/GDD6BYsIzmPCgan0LEk4eoXq8QAGZ0CG5oSaoikmwf8fjOLP87A==",
+  "dgSpecHash": "ktlzIrInCdtL8LJD6icTDB5vxi1H8HeySMTDHFxpIXx81iAq9TW6dI8QqT92Ygy2KuMWAgqicBFl8I0uKgJe9A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Jesper\\source\\repos\\BornApp\\BornApp\\BornApp\\BornApp.csproj",
   "expectedPackageFiles": [
@@ -8,7 +8,8 @@
     "C:\\Users\\Jesper\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\Jesper\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.essentials\\1.6.1\\xamarin.essentials.1.6.1.nupkg.sha512",
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512"
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\5.0.0.2012\\xamarin.forms.5.0.0.2012.nupkg.sha512",
+    "C:\\Users\\Jesper\\.nuget\\packages\\xamarin.forms.maps\\5.0.0.2012\\xamarin.forms.maps.5.0.0.2012.nupkg.sha512"
   ],
   "logs": []
 }

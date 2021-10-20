@@ -9,36 +9,6 @@
              BackgroundImageSource="https://gcdn.pbrd.co/images/abmoNG3WGna6.png?o=1">
 
 
-
-
-    <!--<CollectionView x:DataType="local:ItemDetailViewModel" ItemsSource="{Binding Urls}">
-
-            <CollectionView.Header>
-                <Frame HasShadow="True">
-                    --><!--<Label Text="Is this working=?"/>--><!--
-                    <Label Text="{Binding Description}" FontSize="18" TextColor="#a3927a"/>
-                </Frame>
-            </CollectionView.Header>
-
-            <CollectionView.ItemsLayout>
-                <GridItemsLayout Orientation="Vertical" Span="1"/>
-            </CollectionView.ItemsLayout>
-
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-
-                    <StackLayout>
-
-                        <Grid>
-                            <Image Source="{Binding }"/>
-                        </Grid>
-                        
-                    </StackLayout>
-
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>-->
-
     <ScrollView>
 
 

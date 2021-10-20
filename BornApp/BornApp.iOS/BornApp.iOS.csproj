@@ -142,4 +142,7 @@
       <Name>BornApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\map_marker.png" />
+  </ItemGroup>
 </Project>
